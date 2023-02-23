@@ -18,7 +18,7 @@ India
   534  cat deserts.txt | sort | uniq > deserts.txt rivers.txt effort.txt
   535  cat rivers.txt | sort | uniq > Nile.txt Ohio.txt India.txt
   536  cat rivers.txt | sort | uniq > Nile.txt Yellow.txt  India.txt
-  537  cat rivers.txt | sort | uniq > Nile.txt deserts.txt  India.txt
+  537  cat rivers.txt | sort | uniq -d > Nile.txt deserts.txt  India.txt
   538  cat rivers.txt
   539  comm Nile.txt deserts.txt India.txt
   540  cmp  Nile.txt deserts.txt India.txt
