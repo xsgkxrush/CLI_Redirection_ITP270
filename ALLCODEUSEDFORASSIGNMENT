@@ -1,0 +1,25 @@
+cat rivers_file.sh 
+  523  touch rivers.txt
+  524  nano rivers
+ Amazon
+Congo
+Nile
+Yellow
+India
+525  nano rivers.txt
+  526  sed -i 's/Ohio/Amazon/g' rivers.txt
+  527  cat rivers.txt
+  528  sed -i 'Ohio/Amazon/' rivers.txt
+  529  sed 's/Ohio/Amazon/' rivers.txt 
+  530  cat rivers.txt
+  531  sed 's/Amazon/Ohio' rivers.txt 
+  532  sed 's/Amazon/Ohio/' rivers.txt
+  533  cat rivers.txt
+  534  cat deserts.txt | sort | uniq > deserts.txt rivers.txt effort.txt
+  535  cat rivers.txt | sort | uniq > Nile.txt Ohio.txt India.txt
+  536  cat rivers.txt | sort | uniq > Nile.txt Yellow.txt  India.txt
+  537  cat rivers.txt | sort | uniq > Nile.txt deserts.txt  India.txt
+  538  cat rivers.txt
+  539  comm Nile.txt deserts.txt India.txt
+  540  cmp  Nile.txt deserts.txt India.txt
+  541  comm Nile.txt deserts.txt 
