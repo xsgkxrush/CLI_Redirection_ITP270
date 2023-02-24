@@ -36,6 +36,7 @@
 33
 34 #Compare the original file to the modified copy
 35 diff rivers.txt new_rivers_v3.txt
+touch rivers.tx | echo "Amazon River, Nile RIver, Yangtze River, Danube River, Potomac River"
 
 
 
