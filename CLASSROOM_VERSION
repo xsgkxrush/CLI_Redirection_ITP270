@@ -1,42 +1,33 @@
- touch CLI_Redirection_Solution.sh
-#Robell Gebreyohannes 
-#ITP 270 CLI REDIRECTION
 #!/bin/bash
- 2
- 3 #Create a file 
- 4 touch rivers.txt
- 5
- 6 #Open the file using any terminal editor
- 7 nano rivers.txt
- 8
- 9 #Add five river names to it
-10 #Make sure you are adding "amazon river" to the list
-11 echo -e  "Amazon River"\n > rivers.txt
-12 echo -e "Nile River"\n >> rivers.txt
-13 echo -e "Yangtze River"\n >> rivers.txt
-14 echo -e  "Danube River"\n >> rivers.txt
-15 echo -e "Potomac River" >> rivers.txt
-16 #cat rivers.txt
-17
-18 Replace the word "amazon" with "ohio"
-19 sed -i 's/amazon/ohio/g' rivers.txt > new_ rivers.txt
-20
-21  
-22
-23 #Sort the river names alphabetically
-24 sort new_rivers.txt > new_rivers_v2.txt
-25
-26
-27 #Use command to filter out duplicates
-28 uniq -d new_rivers_v2.txt > new_rivers_v3.txt
-29
-30 #Use redirection to create three copies of the file (one liner)
-31
-32
-33
-34 #Compare the original file to the modified copy
-35 diff rivers.txt new_rivers_v3.txt
-touch rivers.tx | echo "Amazon River, Nile RIver, Yangtze River, Danube River, Potomac River"
-echo -e "Amazon\nNile\nYangtze\nMississippi\nDanube\n"
+
+#Robell Gebreyohannes
+#ITP270
+#CLI Redirection Solution
+
+#Create a file
+touch rivers.txt
+
+#Add five river names to it
+#Make sure you are adding "amazon river" to the list
+echo -e "Amazon River\n" > rivers.txt 
+echo -e "Nile River\n"   >> rivers.txt
+echo -e "Yangtze River\n" >> rivers.txt
+echo -e "Danube River\n" >> rivers.txt 
+echo -e "Potomac River\n" >> rivers.txt
+echo -e "Potomac River\n" >> rivers.txt
+
+#Replace the word "amazon" with "ohio"
+sed 's/Amazon/Ohio/g' rivers.txt > new_rivers.txt 
+
+#Sort the river names alphabetically
+sort new_rivers.txt > new_rivers_v2.txt
+
+#Use command to filter out duplicates
+uniq new_rivers_v2.txt > new_rivers_v3.txt
+
+#Compare the original file and the modified copy
+diff rivers.txt new_rivers_v3.txt
 
 
+#One-liner
+touch rivers.txt && echo -e "Amazon River\nNile River\nYangtze River\nPotomac River\nDanube River\nPotomac River" > rivers.txt && sort rivers.txt | uniq > rivers2.txt | sed 's\Amazon\Ohio\g' rivers2.txt > rivers3.txt  && diff rivers.txt rivers3.txt
